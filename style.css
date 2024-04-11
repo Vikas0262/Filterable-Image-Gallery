@@ -1,0 +1,127 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background: #fbc2eb;
+ }
+
+ .flex {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ .container {
+     text-align: center;
+     margin: 4rem auto;
+     width: 95%;
+ }
+
+ h2 {
+     font-size: 2.3rem;
+     color: #F4459A;
+     margin-bottom: 1rem;
+ }
+
+ .menu {
+     margin: 1rem 0;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ .menu a {
+     font-size: 1.1rem;
+     text-decoration: none;
+     margin: 0.5rem;
+     background-color: #753CF8;
+     color: #fff;
+     padding: 8px 22px;
+     border-radius: 5px;
+ }
+
+ .box {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ .store-item {
+     width: calc(25% - 2rem);
+     /* 4 images per row */
+     margin: 1rem;
+     /* spacing between images */
+     padding: 1rem;
+     transition: opacity 0.5s, transform 0.3s;
+ }
+
+ .store-item img {
+     width: 100%;
+     height: auto;
+     display: block;
+     box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+     transition: transform 0.3s;
+ }
+
+ .store-item:hover img {
+     transform: scale(1.05);
+ }
+
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.9);
+     display: none;
+     justify-content: center;
+     align-items: center;
+     z-index: 999;
+ }
+
+ .overlay.active {
+     display: flex;
+ }
+
+ .overlay img {
+     max-width: 90%;
+     max-height: 90%;
+ }
+
+ .close-btn {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     color: #fff;
+     cursor: pointer;
+     font-size: 24px;
+     z-index: 1000;
+ }
+
+ .close-btn:hover {
+     color: #ccc;
+ }
+
+ .store-item.enlarged {
+     opacity: 0.3;
+ }
+
+ @media (max-width: 768px) {
+     .store-item {
+         width: calc(50% - 2rem);
+         /* 2 images per row */
+     }
+ }
+
+ @media (max-width: 480px) {
+     .store-item {
+         width: calc(100% - 2rem);
+         /* 1 image per row */
+     }
+ }
